@@ -83,3 +83,13 @@ export RESOURCE_ID="projects/your-project-id/locations/us-central1/reasoningEngi
 
 python3 deploy.py
 ```
+
+## Testing a Deployed Agent
+
+Use `test_query.py` to send a test query to a deployed agent and stream the response.
+
+```bash
+python3 test_query.py projects/YOUR_PROJECT_ID/locations/us-central1/reasoningEngines/YOUR_ENGINE_ID "your query here"
+```
+
+It authenticates using Application Default Credentials (`gcloud auth application-default login`) and streams the agent's response to stdout as it arrives.
